@@ -2,8 +2,8 @@
 Contributors: joshhartman, davekinkead
 Tags: admin, dashboard, widgets, command, manage, hide, access, capabilities
 Requires at least: 2.9.2
-Tested up to: 3.0.4
-Stable tag: 1.0
+Tested up to: 3.1
+Stable tag: 1.0.1
 
 Command your admin dashboard. Manage built-in widgets and dynamically registered widgets. Hide widgets depending upon user capabilities.
 
@@ -28,6 +28,10 @@ After installation access to all dashboard widgets is removed, then you can use 
 
 After installation access to all dashboard widgets is removed, then you can use the options at Settings > Dashboard Commander to configure the minimum access level for each widget.
 
+= I have a widget that shows up when I'm logged in as an Administrator, but i can't get it to show up for an Editor/Author/Contributor?
+
+Some WordPress core dashboard widgets and other plugin dashboard widgets are restricted to a certain user capability level. Example: You can not make the Recent Comments dashboard widget visible to a Subscriber, Contributor or Author because of this fact. This can not be overridden using Dashboard Commander, but you can override this behavior by hacking the specific widget-setup function in the WordPress core or plugin code. 
+
 = Have a question that is not addressed here? =
 
 Leave a comment on the plugin homepage http://www.warpconduit.net/wordpress-plugins/dashboard-commander/
@@ -38,5 +42,10 @@ Leave a comment on the plugin homepage http://www.warpconduit.net/wordpress-plug
 
 == Changelog ==
 
+= 1.0.1 =
+* Tested on WordPress 3.1
+* Updated FAQ
+* Added Settings link on Plugins page
+
 = 1.0 =
-* First stable release.
+* First stable release

@@ -3,7 +3,7 @@
 Plugin Name: Dashboard Commander
 Plugin URI: http://www.warpconduit.net/wordpress-plugins/dashboard-commander/
 Description: Command your admin dashboard. Manage built-in widgets and dynamically registered widgets. Hide widgets depending upon user capabilities. Plugin is based upon Dashboard Heaven by Dave Kinkead.
-Version: 1.0
+Version: 1.0.1
 Author: Josh Hartman
 Author URI: http://www.warpconduit.net
 License: GPL2
@@ -29,6 +29,7 @@ add_action('wp_dashboard_setup', 'dcmd_wp_dashboard_setup', 99);
 add_action('admin_init', 'dcmd_admin_init');
 add_action('admin_menu', 'dcmd_admin_menu');
 add_action('admin_notices', 'dcmd_admin_notices');
+add_filter("plugin_action_links_".plugin_basename(__FILE__), 'dcmd_plugin_settings_link' );
 
 register_deactivation_hook(__FILE__, 'dcmd_deactivate');
 
@@ -56,6 +57,17 @@ function dcmd_admin_init() {
 			register_setting('dcmd_options', 'dcmd_'.$widget['id']);
 		}
 	}
+}
+
+/**
+ *	Display Settings link on Plugins admin page
+ * 	@args	array
+ *	@return	array
+ */
+function dcmd_plugin_settings_link($links) { 
+  $settings_link = '<a href="options-general.php?page='.plugin_basename(__FILE__).'">Settings</a>'; 
+  array_unshift($links, $settings_link); 
+  return $links; 
 }
 
 /**
@@ -178,6 +190,8 @@ function dcmd_admin_page() {
 		<p class="submit">
 			<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
 		</p>
+		<p><strong>Note:</strong> You cannot force a widget to be visible if it was never visible to a capability to begin with. Example: It is not possible to make the 'Recent Comments' widget visible to a user with an 'edit_published_posts' or lower capability.  This is due to the widget's specific add-to-dashboard code and not a limitation of this plugin.</p>
+		<p>Not familiar with WordPress capabilities? Refer to the <a href="http://codex.wordpress.org/Roles_and_Capabilities#Capability_vs._Role_Table" target="_blank">WordPress Codex</a> to see how capabilities relate to user roles</p>
 	</form>
 	<?php endif; ?>
 	</div>
