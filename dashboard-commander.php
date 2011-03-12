@@ -3,7 +3,7 @@
 Plugin Name: Dashboard Commander
 Plugin URI: http://www.warpconduit.net/wordpress-plugins/dashboard-commander/
 Description: Command your admin dashboard. Manage built-in widgets and dynamically registered widgets. Hide widgets depending upon user capabilities. Plugin is based upon Dashboard Heaven by Dave Kinkead.
-Version: 1.0.1
+Version: 1.0.2
 Author: Josh Hartman
 Author URI: http://www.warpconduit.net
 License: GPL2
@@ -81,7 +81,6 @@ function dcmd_deactivate() {
 		delete_option('dcmd_'.$widget['id']);
 	}
 	delete_option('dcmd_dashboard_widgets');
-	unregister_setting('dh-options');
 }
 
 /**
