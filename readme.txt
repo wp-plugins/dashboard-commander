@@ -15,12 +15,16 @@ This plugin is based upon Dave Kinkead's Dashboard Heaven plugin and extends it 
 
 After installation access to all dashboard widgets is removed, then you can use the options at Settings > Dashboard Commander to configure the minimum access level for each widget.
 
+[youtube http://www.youtube.com/watch?v=7YBOm5ov3vs]
+
 == Installation ==
 
 1. Extract the `dashboard-commander` folder to your `wp-content/plugins` directory
 1. Activate the plugin through the admin interface
 1. Visit your dashboard once to build a list of dashboard widgets
 1. Go to Settings > Dashboard Commander to configure access to widgets
+
+[youtube http://www.youtube.com/watch?v=7YBOm5ov3vs]
 
 == Frequently Asked Questions ==
 
