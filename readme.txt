@@ -2,7 +2,7 @@
 Contributors: joshhartman
 Tags: admin, dashboard, widgets, command, manage, hide, access, capabilities
 Requires at least: 2.9.2
-Tested up to: 3.4
+Tested up to: 3.5
 Stable tag: 1.0.2
 
 Command your admin dashboard. Manage built-in widgets and dynamically registered widgets. Hide widgets depending upon user capabilities.
