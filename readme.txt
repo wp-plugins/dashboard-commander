@@ -2,8 +2,8 @@
 Contributors: joshhartman
 Tags: admin, dashboard, widgets, command, manage, hide, access, capabilities
 Requires at least: 2.9.2
-Tested up to: 3.6
-Stable tag: 1.0.2
+Tested up to: 3.8
+Stable tag: 1.0.3
 
 Command your admin dashboard. Manage built-in widgets and dynamically registered widgets. Hide widgets depending upon user capabilities.
 
@@ -45,6 +45,9 @@ Leave a comment on the plugin homepage http://www.warpconduit.net/wordpress-plug
 1. Dashboard Commander Options found at Settings > Dashboard Commander
 
 == Changelog ==
+
+= 1.0.3 =
+* Update for WordPress 3.8
 
 = 1.0.2 =
 * Removed orphaned code in deactivation function
